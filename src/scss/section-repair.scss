@@ -1,0 +1,151 @@
+.repair {
+	background-color: #f8f8f8;
+}
+
+.repair__header {
+	border-top: 1px solid #D9FFF5;
+	background: linear-gradient(to right ,#F8F8F8, #fff);
+	padding-left: 5%;
+	padding-top: 15px;
+	padding-bottom: 16px;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.swiper-wrapper {
+	padding: 0;
+	left: 5%;
+	width: 95%;
+}
+
+.swiper-slide {
+	width: 224px;
+}
+
+.swiper-repair .swiper-pagination-bullet {
+	background-color: #DDD;
+	width: 12px;
+	height: 12px;
+}
+
+.swiper-repair .swiper-pagination-bullet-active {
+	background-color: #B5B6BC;
+}
+
+.swiper-repair__swiper-pagination {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.repair__card {
+	background-color: #fff;
+	border: 1px solid #EAEAEA;
+	border-radius: 5px;
+	width: 224px;
+	height: 160px;
+	display: flex;
+	padding-left: 14px;
+	padding-right: 14px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.repair__card-sub-title {
+	font-family: 'TTLakesRegular';
+	font-weight: 600;
+	padding-top: 15px;
+}
+
+.repair__card-button {
+	border: none;
+	position: absolute;
+	bottom: 10%;
+	right: 10%;
+	background-color: transparent;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	transition: 0.3s;
+}
+
+.repair__card-button:hover,
+.repair__card-button:focus {
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
+.repair__show-all {
+	font-family: 'TTLakesMedium';
+	font-size: 16px;
+	font-weight: 600;
+	color: #1B1C21;
+	border: none;
+	background-color: transparent;
+	margin-left: 6%;
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	transition: 0.3s;
+	margin-bottom: 30px;
+}
+
+.repair__show-all:hover,
+.repair__show-all:focus {
+	cursor: pointer;
+	transform: scale(1.1);
+	color: #7E7E82;
+}
+
+.repair__show-all::before {
+	content: '';
+	display: block;
+	background-image: url(../img/expand.svg);
+	height: 24px;
+	width: 24px;
+}
+
+.repair__show-all--active::before {
+	transform: rotate(180deg);
+	transition: 0.5s;
+}
+
+.repair-slide-hidden {
+	display: none;
+}
+
+.show-hidden-forRepair {
+	display: block !important;
+}
+
+@media (max-width: 768px){
+	
+	.repair__show-all {
+		display: none;
+	}
+
+	.swiper-repair__swiper-pagination {
+		display: block;
+	}
+
+	.repair-slide-hidden {
+		display: block;
+	}
+}
+
+@media (min-width: 1120px) {
+
+	.repair {
+		margin-left: 320px;
+	}
+
+	.swiper-repair__swiper-pagination {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1119px){
+
+	.swiper-repair__swiper-pagination {
+		display: none;
+	}
+}

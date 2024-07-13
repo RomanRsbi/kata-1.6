@@ -1,0 +1,277 @@
+body {
+	margin: 0;
+	background-color: #F8F8F8;
+}
+
+.header-menu {
+	display: flex;
+	justify-content: space-between;
+	height: 88px;
+	padding: 0 5%;
+	margin: 0 5px;
+	background-color: rgb(255, 255, 255);
+	border-bottom: 1px solid #D9FFF5;
+}
+
+.header-menu__button {
+	max-height: 50px;
+	margin: auto 0;
+}
+
+.header-menu__diviber {
+	background-color: #EAEAEA;
+	width: 2px;
+	height: 32px;
+	border-radius: 1px;
+	align-self: center;
+	margin: auto 0;
+}
+
+.page-menu {
+	padding-top: 24px;
+	width: 100%;
+}
+
+.page-menu__title {
+	font-family: 'TTLakesBold';
+	font-size: 28px;
+	height: 40px;
+	margin: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+	margin-left: 5%;
+	margin-bottom: 24px;
+}
+
+.page-menu__title::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	background-color: #41F6D7;
+	height: 40px;
+	width: 4px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.page-menu__nav {
+	display: flex;
+	margin-left: 5%;
+	align-items: center;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.page-menu__link {
+	display: inline-block;
+	text-align: center;
+	padding: 7px;
+	text-decoration: none;
+	border: 2px solid #F8F8F8;
+}
+
+.page-menu__mod {
+	padding: 0;
+	margin: 0;
+}
+
+.page-menu__a {
+	text-decoration: none;
+	color: #7E7E82;
+	font-family: 'TTLakesRegular';
+}
+
+.page-menu__nav::-webkit-scrollbar {
+	width: 0;
+}
+
+.page-menu__link:hover,
+.page-menu__link:focus {
+	background-color: #fff;
+	border: 2px solid #B8FFEC;
+	border-radius: 6px;
+	outline: none;
+}
+
+.blog__text {
+	color: #1B1C21;
+	font-size: 14px;
+	margin-left: 5%;
+	font-family: 'TTLakesRegular';
+	padding-bottom: 10px;
+}
+
+.blog__text--hidden {
+	display: none;
+}
+
+.blog__text--visible {
+	display: block;
+}
+
+.blog__next-button {
+	display: flex;
+	width: 200px;
+	align-items: center;
+	color: #1B1C21;
+	height: 24px;
+	font-size: 16px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	font-family: 'TTLakesMedium';
+	transition: 0.5s;
+}
+
+.blog__next-button::before {
+	content: '';
+	margin-left: 5%;
+	margin-right: 8px;
+	display: inline-block;
+	background-image: url(../img/expand.svg);
+	height: 24px;
+	width: 24px;
+}
+
+.blog__next-button--active::before {
+	transform: rotate(180deg);
+}
+
+.blog__logo-img {
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+button {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+}
+
+.header-menu__button,
+.blog__next-button {
+	transition: 0.3s;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.header-menu__button:hover,
+.blog__next-button:hover {
+	transform: scale(1.1);
+	color: #41F6D7;
+	transition: 0.3s;
+}
+
+@media (max-width: 767px){
+
+	.mobile-resolution{
+		display: none;
+	}
+
+	.blog__next-button {
+		margin-left: 5%;
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 1120px){
+
+	.hidden-for-tablet {
+		display: none;
+	}
+}
+
+@media (min-width: 768px){
+
+	.header-menu .logo {
+		margin-right: 32.55%;
+	}
+
+	.blog {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 32px;
+		margin-left: 5%;
+		margin-right: 5%;
+		max-width: 93.7%;
+	}
+
+	.blog__text {
+		margin: 0;
+	}
+
+	.blog__logo-img {
+		border-radius: 5px;
+		width: 50%;
+		height: 100%;
+		margin-left: 6%;
+	}
+
+	.blog__next-button::before {
+		margin-left: 0;
+	}
+}
+
+@media (min-width: 1120px){
+
+	.header-section {
+		margin-left: 320px;
+	}
+
+	.header-menu {
+		visibility: hidden;
+		position: relative;
+		height: 0;
+		transition: 0;
+	}
+
+	.header-menu__button:not(.header-menu__button--link) img {
+		visibility: hidden;
+	}
+
+	.header-menu__button--link {
+		visibility: visible;
+		display: flex;
+		align-items: center;
+		position: absolute;
+		color: #1B1C21;
+		font-family: 'TTLakesMedium';
+		font-size: 16px;
+		right: 5%;
+		top: 42px;
+		transition: 0.3s;
+	}
+
+	.header-menu__button--label {
+		margin-right: 8px;
+	}
+
+	.header-menu__button--link:nth-child(9) {
+		right: calc(5% + 200px);
+	}
+
+	.page-menu__nav {
+		display: flex;
+		white-space: wrap;
+		align-items: center;
+	}
+
+	.page-menu {
+		padding-top: 42px;
+	}
+
+	.page-menu__title {
+		align-items: center;
+	}
+
+	.blog__logo-img {
+		height: 307px;
+		width: 531px;
+	}
+
+	.page-menu__title::before {
+		left: 320px;
+	}
+}
