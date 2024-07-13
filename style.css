@@ -395,7 +395,8 @@ button {
     position: fixed; } }
 
 .brands {
-  background-color: #f8f8f8; }
+  background-color: #f8f8f8;
+  overflow: hidden; }
 
 .brands__header {
   border-top: 1px solid #D9FFF5;
@@ -528,7 +529,8 @@ button {
     display: none; } }
 
 .repair {
-  background-color: #f8f8f8; }
+  background-color: #f8f8f8;
+  overflow: hidden; }
 
 .repair__header {
   border-top: 1px solid #D9FFF5;
